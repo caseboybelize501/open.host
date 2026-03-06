@@ -1,0 +1,21 @@
+SELECTED REPOSITORIES FOR DEPLOYMENT
+==================================================
+
+cinematic3d-framework
+  URL: https://github.com/caseboybelize501/cinematic3d-framework
+  Score: 7.6
+  Language: TypeScript
+  Type: Detected
+
+cog-load
+  URL: https://github.com/caseboybelize501/cog-load
+  Score: 7.6
+  Language: Python
+  Type: Detected
+
+daw
+  URL: https://github.com/caseboybelize501/daw
+  Score: 7.6
+  Language: Python
+  Type: Detected
+

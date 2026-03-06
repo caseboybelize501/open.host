@@ -1,7 +1,39 @@
+# Dependencies
 node_modules/
+
+# Environment variables and secrets
 .env
+.env.local
+.env.*.local
+.env.example
+
+# Logs
 *.log
+
+# Build outputs
 target/
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 .DS_Store
+
+# OS
+Thumbs.db
+
+# Secrets and credentials
+*.pem
+*.key
+credentials.json
+service-account.json

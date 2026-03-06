@@ -1,0 +1,189 @@
+{
+  "tools": {
+    "git": "git ersion 2.52.0.windows.1",
+    "node": "24.11.1",
+    "pip": "pip 26.0 from C:\\Program Files\\Python313\\Lib\\site-packages\\pip (python 3.13)",
+    "docker": "Docker ersion 29.1.5, build 0e6fee6",
+    "gh": "gh ersion 2.87.3 (2026-02-23)"
+  },
+  "project_type": null,
+  "build_settings": {},
+  "platforms": [
+    {
+      "name": "netlify",
+      "display_name": "Netlify",
+      "api_url": "https://api.netlify.com/api/v1",
+      "website": "https://netlify.com",
+      "free_tier": true,
+      "supported_types": [
+        "static",
+        "node",
+        "react",
+        "vue",
+        "angular",
+        "svelte",
+        "gatsby",
+        "nuxt"
+      ],
+      "features": [
+        "spa",
+        "static",
+        "cdn",
+        "functions",
+        "redirects",
+        "forms"
+      ],
+      "limits": {
+        "bandwidth": "100GB/month",
+        "build_minutes": "300/month",
+        "sites": "unlimited"
+      },
+      "cli_tool": "netlify-cli",
+      "env_var": "NETLIFY_AUTH_TOKEN",
+      "healthy": true,
+      "response_time_ms": 549
+    },
+    {
+      "name": "vercel",
+      "display_name": "Vercel",
+      "api_url": "https://api.vercel.com",
+      "website": "https://vercel.com",
+      "free_tier": true,
+      "supported_types": [
+        "static",
+        "node",
+        "react",
+        "vue",
+        "angular",
+        "svelte",
+        "next",
+        "nuxt",
+        "gatsby",
+        "remix"
+      ],
+      "features": [
+        "spa",
+        "static",
+        "cdn",
+        "serverless",
+        "edge-functions",
+        "preview-deployments"
+      ],
+      "limits": {
+        "bandwidth": "100GB/month",
+        "build_minutes": "6000/month",
+        "projects": "unlimited"
+      },
+      "cli_tool": "vercel",
+      "env_var": "VERCEL_TOKEN",
+      "healthy": true,
+      "response_time_ms": 517
+    },
+    {
+      "name": "github_pages",
+      "display_name": "GitHub Pages",
+      "api_url": "https://api.github.com",
+      "website": "https://pages.github.com",
+      "free_tier": true,
+      "supported_types": [
+        "static"
+      ],
+      "features": [
+        "static",
+        "cdn",
+        "jekyll",
+        "custom-domain"
+      ],
+      "limits": {
+        "bandwidth": "unlimited",
+        "build_minutes": "N/A",
+        "sites": "unlimited"
+      },
+      "cli_tool": "gh",
+      "env_var": "GITHUB_TOKEN",
+      "healthy": true,
+      "response_time_ms": 449
+    },
+    {
+      "name": "render",
+      "display_name": "Render",
+      "api_url": "https://api.render.com",
+      "website": "https://render.com",
+      "free_tier": true,
+      "supported_types": [
+        "node",
+        "python",
+        "docker",
+        "go",
+        "rust",
+        "static"
+      ],
+      "features": [
+        "server",
+        "database",
+        "docker",
+        "cron",
+        "background-workers"
+      ],
+      "limits": {
+        "bandwidth": "unlimited",
+        "build_minutes": "N/A",
+        "services": "limited (free tier)"
+      },
+      "cli_tool": "render",
+      "env_var": "RENDER_API_KEY",
+      "healthy": true,
+      "response_time_ms": 289
+    },
+    {
+      "name": "surge",
+      "display_name": "Surge",
+      "api_url": "https://surge.sh",
+      "website": "https://surge.sh",
+      "free_tier": true,
+      "supported_types": [
+        "static"
+      ],
+      "features": [
+        "static",
+        "cdn",
+        "ssl",
+        "custom-domain"
+      ],
+      "limits": {
+        "bandwidth": "unlimited",
+        "build_minutes": "N/A",
+        "sites": "unlimited"
+      },
+      "cli_tool": "surge",
+      "env_var": "SURGE_TOKEN",
+      "healthy": true,
+      "response_time_ms": 293
+    }
+  ],
+  "credentials": {
+    "github": "<your_token_here>"
+  },
+  "inference_config": {
+    "available": true,
+    "servers": [
+      {
+        "port": 11434,
+        "healthy": true
+      }
+    ]
+  },
+  "hardware_inventory": {},
+  "capabilities": {
+    "node_deploy": false,
+    "python_deploy": false,
+    "docker_deploy": true,
+    "netlify_deploy": false,
+    "vercel_deploy": false,
+    "github_pages_deploy": true,
+    "render_deploy": false,
+    "llm_inference": false
+  },
+  "validation_state": {},
+  "memory_state": {}
+}
