@@ -5,7 +5,7 @@ Automates deployment of Blueprint projects to Render.
 
 Setup:
 1. Get API Key: https://dashboard.render.com/u/settings/api
-2. Set RENDER_API_KEY environment variable
+2. Key is auto-loaded from .env file
 3. Run: python deploy_to_render.py
 
 API Docs: https://api-docs.render.com
@@ -16,6 +16,13 @@ import time
 import requests
 from pathlib import Path
 from datetime import datetime
+
+# Load .env file
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except:
+    pass  # Optional dependency
 
 # ============================================================================
 # CONFIGURATION
@@ -227,6 +234,9 @@ if __name__ == '__main__':
         services = client.list_services()
         print(f"Found {len(services)} services:")
         for s in services:
-            print(f"  - {s['name']} ({s['id']}) - {s['serviceDetails']['plan']}")
+            name = s.get('name', 'unknown')
+            sid = s.get('id', 'unknown')
+            plan = s.get('serviceDetails', {}).get('plan', 'unknown') if 'serviceDetails' in s else 'unknown'
+            print(f"  - {name} ({sid}) - {plan}")
     else:
         deploy_all_tier1(api_key, args.user)

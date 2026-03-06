@@ -170,6 +170,26 @@ Layer 4: Meta-Learning Index (sklearn)
 
 ## Quick Start
 
+### ⚠️ Offline-First Deployment Philosophy
+
+**Validate locally BEFORE deploying to save free tier hours!**
+
+```bash
+# ALWAYS run this first (offline, free, instant)
+python validate_deploy.py
+
+# Expected: 34/34 projects pass, 0 failed
+# If failed: FIX LOCALLY first, then deploy
+```
+
+**Why?** Render free tier = 750 hours/month. Failed builds waste hours you can't get back.
+
+**The Right Way:**
+- ❌ WRONG: Deploy → Fail → Fix → Redeploy (wastes 50+ hours)
+- ✅ RIGHT: Validate → Fix offline → Deploy once (uses ~8 hours total)
+
+See [RENDER_DEPLOY_GUIDE.md](RENDER_DEPLOY_GUIDE.md) for complete deployment strategy.
+
 ### Prerequisites
 
 ```bash
@@ -217,6 +237,29 @@ uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
 
 ### Workflow Example
 
+#### Deployment Workflow (Offline-First)
+```bash
+# 1. Validate all projects locally (REQUIRED FIRST STEP)
+python validate_deploy.py
+
+# 2. Fix any issues offline
+cd <project-name>
+# Edit Dockerfile, requirements.txt, etc.
+git add . && git commit -m "Fix: description" && git push
+
+# 3. Re-validate until 100% pass
+python validate_deploy.py
+
+# 4. Deploy to Render (API key in .env)
+python deploy_to_render.py
+
+# 5. Check deployed services
+python deploy_to_render.py --list
+
+# Your service is live: https://<project>.onrender.com
+```
+
+#### API Workflow (Local Development)
 ```bash
 # 1. Scan for available models
 curl http://localhost:8000/api/models/scan
