@@ -1,7 +1,36 @@
 # OPEN.HOST JARVIS - WORKFLOW EXECUTION SUMMARY
 
-**Date**: March 5, 2026  
+**Date**: March 5, 2026
 **Status**: ✅ COMPLETE
+
+---
+
+## ⚠️ IMPORTANT: Offline-First Deployment
+
+**Before deploying ANY project:**
+
+```bash
+# Validate locally first (saves free tier hours)
+python validate_deploy.py
+```
+
+**Render free tier = 750 hours/month.** Failed builds waste hours you can't get back.
+
+- ❌ WRONG: Deploy → Fail → Fix → Redeploy
+- ✅ RIGHT: Validate → Fix offline → Deploy once
+
+See [RENDER_DEPLOY_GUIDE.md](RENDER_DEPLOY_GUIDE.md) for complete guide.
+
+---
+
+## CURRENT DEPLOYMENT STATUS
+
+| Project | Status | URL |
+|---------|--------|-----|
+| **daw** | ✅ LIVE | https://daw-ez9o.onrender.com |
+| cog-load | ⏳ Ready | - |
+
+**Auto-deploy remaining:** `python deploy_to_render.py`
 
 ---
 

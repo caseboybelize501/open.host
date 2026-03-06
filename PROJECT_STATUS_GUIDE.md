@@ -286,6 +286,28 @@ These need: README + package.json/requirements.txt + Dockerfile
 
 ## DEPLOYMENT WORKFLOW
 
+### ⚠️ Offline-First Deployment
+
+**BEFORE deploying, ALWAYS validate:**
+
+```bash
+# Run this first (offline, free, instant)
+python validate_deploy.py
+
+# Should show: 34/34 Passed, 0 Failed
+# If failed: FIX LOCALLY before deploying
+```
+
+**Why?** Render free tier = 750 hours/month. Failed builds waste hours.
+
+**Deploy Order:**
+1. ✅ **Tier 1** (10 projects, score 9.5) - Ready now
+2. ⚠️ **Tier 2** (13 projects, score 8.5) - Validate first
+3. ❌ **Tier 3** (11 projects) - Test locally first
+4. ❌ **Minimal** (27 projects) - Not ready
+
+See [RENDER_DEPLOY_GUIDE.md](RENDER_DEPLOY_GUIDE.md) for complete guide.
+
 ### For Tier 1 & 2 Projects (Ready Now):
 
 #### Option A: Render (Recommended)

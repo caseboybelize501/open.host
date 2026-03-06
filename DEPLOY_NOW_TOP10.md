@@ -1,6 +1,40 @@
 # 🚀 DEPLOY NOW - TOP 10 PROJECTS
 
-**Immediate Action Required**: Deploy these 10 highest-priority projects
+**⚠️ READ FIRST: Offline-First Deployment**
+
+Before deploying ANY project:
+```bash
+# Validate locally (saves free tier hours)
+python validate_deploy.py
+
+# Expected: 34/34 pass, 0 failed
+# If failed: FIX LOCALLY first!
+```
+
+**Why?** Render free tier = 750 hours/month. Failed builds waste hours.
+- ❌ WRONG: Deploy → Fail → Fix → Redeploy
+- ✅ RIGHT: Validate → Fix offline → Deploy once
+
+See [RENDER_DEPLOY_GUIDE.md](RENDER_DEPLOY_GUIDE.md) for complete guide.
+
+---
+
+## Deployment Status
+
+| Project | Status | URL |
+|---------|--------|-----|
+| **daw** | ✅ DEPLOYED | https://daw-ez9o.onrender.com |
+| dev.portfolio | ⏳ Ready | - |
+| fpga.design | ⏳ Ready | - |
+| git.initv3 | ⏳ Ready | - |
+| git.intelli | ⏳ Ready | - |
+| gpt.code.debug | ⏳ Ready | - |
+| legal | ⏳ Ready | - |
+| ml.learn | ⏳ Ready | - |
+| RAM | ⏳ Ready | - |
+| tech.debt.code | ⏳ Ready | - |
+
+**Automated Deploy:** `python deploy_to_render.py`
 
 ---
 
